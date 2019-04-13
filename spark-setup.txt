@@ -1,0 +1,22 @@
+sudo su
+
+yum udpate -y
+
+yum install nano
+
+#install Java 8 jdk and jre
+
+#JDK8
+yum install java-1.8.0-openjdk-devel
+
+#JRE8
+yum install java-1.8.0-openjdk
+
+
+#Install Spark 
+wget -c https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
+mkdir ~/spark
+tar -zxvf spark-2.2.0-bin-hadoop2.7.tgz -C ~/spark/
+
+jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+ http://0.0.0.0:8888/?token=xxxxxx
